@@ -39,9 +39,8 @@ def map_to_square(source_array)
   end
   return new
 end
-<<<<<<< HEAD
 
-def reduce_to_total(source_array, starting_point)
+def reduce_to_total(source_array, starting_point = 0)
   i = 0
   sum = starting_point
   while i < source_array.length do
@@ -49,3 +48,30 @@ def reduce_to_total(source_array, starting_point)
     i += 1
   end
   return sum
+end
+
+def reduce_to_all_true(source_array)
+  all_true = true
+  source_array.each do |i|
+    if i
+      all_true = true
+    else
+      all_true = false
+      return all_true
+    end
+  end
+  return all_true
+end
+
+def reduce_to_any_true(source_array)
+  all_true = true
+  source_array.each do |i|
+    if i
+      all_true = true
+      return all_true
+    else
+      all_true = false
+    end
+  end
+  all_true
+end
