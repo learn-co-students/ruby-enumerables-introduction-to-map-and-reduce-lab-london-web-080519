@@ -56,15 +56,18 @@ end
 def reduce_to_all_true(source_array)
   i = 0 
   while i < source_array.length do 
-    if !!source_array[i]
-      return true
+    if !source_array[i]
+      return false
     end
       i += 1
   end
-return false
+return true
 end
 
-
+#here the ! is iterating over every element in source_array to see if any evaluate 
+#to be false. If they do the loop is terminated early and 'false' is returned. 
+#If it goes over every element and fails to find any that are false the loop
+#by default will return true. 
 
 
 
