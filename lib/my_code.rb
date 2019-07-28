@@ -71,4 +71,22 @@ end
 
 
 
+def reduce_to_any_true(source_array)
+  i = 0 
+ while i < source_array.length do
+   if source_array[i] == true 
+     return true
+   end
+   i += 1 
+  end
+  return false
+end
+
+
+#again here we have a method that wants by default to return false but will first 
+#iterate over each element to check for any that evaluate to true. If that condition
+#is satisfied then the loop terminates and the method will return 'true' but 
+#will return the default 'false' (as specified at the final return value) if not.
+
+
 
